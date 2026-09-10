@@ -1,0 +1,203 @@
+==========================================================
+# Project_Kickoff
+Date: 09.09.26
+==========================================================
+
+Research:
+    There exists multiple parking platforms or apps that include ParkMobile, SpotHero, ParkWhiz, and BestParking.
+    Many of these apps and platforms provide parking availability and convienent accessiblity towards paying the fees.
+    To be different, I am including parking predictibility, parking recommendations, violation prevention, and accessibility-based parking that uses an AI to help manage and guide the usersto their desired parking needs.
+
+Vision & Scope:
+    $oftware Corp is a software development studio that works with companies and organizations to aid in needs of everyday struggles. This project was acquired through the demand for a centralized and efficient approach to parking management. The Smart Parking Platform handles the issues that everyday parking has like congestion, frustration, and the lack of productivity in finding spaces. The project will examine exisiting parking solutions and find opportunities to improve user experience and needs with real-time information, improved parking management and payment, and AI aided recommendation.
+    The software will provide:
+        User registration and authentication
+        Real-time parking space availability
+        Interactive map displaying available parking locations
+        Parking reservation capability
+        Digital payment processing
+        Reservation history and receipts
+        Administrative dashboard for parking operators
+        Occupancy reporting and analytics
+        Notifications and alerts for users
+        Integration with external mapping/navigation services
+
+
+Software Requirements Specification (SRS):
+    Project: Parking$MART
+    Version 1.0
+    Date: 09.09.26
+    
+    1. Introduction
+    1.1 Purpose
+        Requirements for Parking$MART is to allow users to efficiently find available parking spaces through interactice maps with real-time parking availability, provides notifications and reservations, and accessible digital payments. Parking operators will have a dashboard to manage the parking garages/spaces, monitor occupancy, and parking analytics. The project will help users spend less time in searching for parking and allow operators to have improve management of parking facilities.
+    1.2 Scope
+        Parking$MART will be available on mobile and web applications that users to locate available parking spaces, make parking reservations, receive notifications on parking accessibility, and complete digital payments on the app. For parking operators, it will allow them to manage and administer parking spaces and occupancy, review reservations, and generate reports and analytics. Some things that are out of scope for the project will be parking enforcement, any vehicle tracking, automated vehicle parking, or any physical structures that within parking garages/spaces like gates, cameras, sensors, etc.
+
+    2. Overall Description
+        - Users: 
+            Drivers/Vehicle Owners looking for parking spaces
+            Parking Operators/Administrators
+            Third-Party payments services
+        - System Environment: Web-based/Mobile application
+        - Constraints:
+            Development time has to be within 4 months
+            run on cloud-based software to allow web/mobile based application
+            hardware must be high-end to handle sensors and other equipment for parking
+            for parking operators must need code/biometric authentication to access parking managment/admin
+            high-level of security to secure account, payment, and reservation information
+            Third-Party dependencies like mapping, payment, and other services.
+
+    3. Functional Requirements
+       FR1: User Registration
+        Program shall allow new users to create an account using required information to register
+       FR2: User Authentication
+        Program shall allow users to log in and out of their accounts
+       FR3: Real-Time Parking Availability
+        Program shall show users current availability of parking garages/spaces
+       FR4: Interactive Parking Map
+        Software shall show users an interactive map to show parking spots
+       FR5: Parking Search
+        Software shall allow users to find any parking based on their needs
+       FR6: Parking Reservation
+        Program shall allow users to reserve a parking spot
+       FR7: Digital Payment
+        Program shall allow users to pay digitally for parking reservations
+       FR8: Reservation History
+        Program shall contain a history of user reservations
+       FR9: Reservation Receipt
+        Program shall give users a receipt after a payment
+       FR10: Notifications/Alerts
+        Program shall alert users of important parking events
+       FR11: Parking Admin Dashboard
+        Program shall give authorized parking personnel a dashboard of analytics and information regarding parking garages/spaces
+       FR12: Parking Management
+        Program shall allow authorized parking operators to manage parking spaces
+       FR13: Role-Based Access Control
+        Software shall limit user functions based on user role
+       FR14: Navigation/Mapping integration
+        Software shall integrate with a mapping service
+       FR15: Simultaneous Reservation Prevention
+        Software shall prevent mutliple users from reserving the same parking space at overlapping times
+       FR16: User Double Booking
+        Software shall prevent double-booking from a user  
+    
+    4. Non-Functional Requirements
+        NFR1: Program shall support at least 1 million concurrent users
+        NFR2: Program shall process user registration within 3 seconds
+        NFR3: Program shall process user reservation within 10 seconds
+        NFR4: Program shall update parking availability within 10 seconds after receiving registration/occupancy data
+        NFR5: Program shall provide 99.99% uptime
+        NFR6: Program shall process payment methods comepltely and securely within 3 seconds
+
+
+    5. Use Case Examples
+        USC-1:
+            Title: Registering for an account
+            Actor: User/Driver
+            Precondition: User does not have an account for the Software
+            Steps:
+                1. User taps/selects "Register"
+                2. Program displays reigstration form
+                3. User inputs required information
+                4. User clicks submit
+                5. Program validates information
+                6. Program creates account
+                7. Program confirms successful registration
+            Postcondition: New user account is created
+        USC-2:
+            Title: Logging into Program
+            Actor: User/Driver
+            Precondition: user has an existing account, but not logged in
+            Steps:
+                1.User enters their email and password
+                2. Program validates information
+                3. Program authenticates user
+                4. Program displays users home page
+            Postcondition: User is granted access to the program
+        USC-3:
+            Title: Parking Search
+            Actor: User/Driver
+            Precondition: User has access to program and is looking for a parking spot given destination/search location
+            Steps:
+                1. User enters information on destination (zip code, address, etc.)
+                2. Program searches available
+            Postcondition: Program shows available parking spaces that match the user's search
+        USC-4:
+            Title: Looking for Real-time availabilty for parking
+            Actor: User/Driver
+            Precondition: Parking spaces are in the program and occupancy information is available
+            Steps:
+            Postcondition: User is shown available and occupied spaces on an interactive map live
+        USC-5:
+            Title: Viewing interactive map 
+            Actor: User/Driver
+            Precondition: User has access to program and live locations are available in the program
+            Steps:
+            Postcondition: User is shown parking spaces/garages on an interactive map
+        USC-6:
+            Title: View Parking details/data
+            Actor: User/Driver
+            Precondition: Parking space exists and user selects it
+            Steps:
+            Postcondition: Information related to selected parking space is displayed
+        USC-7:
+            Title: Reserving Parking Space
+            Actor: User/Driver
+            Precondition: User is logged into program, parking space is available, Parking period is available
+            Steps:
+            Postcondition: Parking space is reserved and created during user's selected period
+        USC-8:
+            Title: User makes digital payment
+            Actor: User/Driver
+            Precondition: User has a valid and available payment method, User has made a valid reservation
+            Steps:
+            Postcondition: Payment is processed and confirms reservation, transaction is successful
+        USC-9:
+            Title: Viewing Reservation History
+            Actor: User/Driver
+            Precondition: User has at least one reservation confirmed/processed
+            Steps:
+            Postcondition: User's current and previous reservations are shown
+        USC-10:
+            Title: View Receipt
+            Actor: User/Driver
+            Precondition: User has a completed reservation with a successful payment
+            Steps:
+            Postcondition: User is shown receipt information with related payment
+        USC-11:
+            Title: Receiving notifications and alerts
+            Actor: User/Driver/Parking Admin
+            Precondition: User is logged into their respective accounts and notifcations are enabled, a related event occurs
+            Steps:
+            Postcondition: Related/relevant notification is shown/sent to the user 
+        USC-12:
+            Title: Managing Parking spaces
+            Actor: Parking Admin
+            Precondition: Admin is authenticated and has admin privileges
+            Steps:
+            Postcondition: Selected parking spaces can be updated, added, or removed
+        USC-13:
+            Title: Managing Reservations
+            Actor: Parking Admin
+            Precondition: Admin is authenticated and has admin privileges, reservations are active
+            Steps:
+            Postcondition: Reservations are updated, denied, or viewed by the Admin
+        USC-14:
+            Title: Looking at occupancy analytics/reports
+            Actor: Parking Admin
+            Precondition: Admin is authenticated and has admin privileges, occupancy data is in the program
+            Steps:
+            Postcondition: Occupancy-related analytics and reports are shown to the admin
+        USC-15:
+            Title: Navigation directions to selected parking spot
+            Actor: User/Driver
+            Precondition: User selects parking garage/spot, external mapping service is up
+            Steps:
+            Postcondition: User receives directions towards their selected parking garage/spot
+
+
+
+
+--------------------------------------------------------
+Last updated: 09.09.26
