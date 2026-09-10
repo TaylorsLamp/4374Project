@@ -3,6 +3,8 @@
 Date: 09.09.26
 ==========================================================
 
+Table of Contents:
+
 Research:
     There exists multiple parking platforms or apps that include ParkMobile, SpotHero, ParkWhiz, and BestParking.
     Many of these apps and platforms provide parking availability and convienent accessiblity towards paying the fees.
@@ -43,7 +45,6 @@ Software Requirements Specification (SRS):
         - Constraints:
             Development time has to be within 4 months
             run on cloud-based software to allow web/mobile based application
-            hardware must be high-end to handle sensors and other equipment for parking
             for parking operators must need code/biometric authentication to access parking managment/admin
             high-level of security to secure account, payment, and reservation information
             Third-Party dependencies like mapping, payment, and other services.
@@ -83,7 +84,7 @@ Software Requirements Specification (SRS):
         Software shall prevent double-booking from a user  
     
     4. Non-Functional Requirements
-        NFR1: Program shall support at least 1 million concurrent users
+        NFR1: Program shall support at least 10,000 concurrent users
         NFR2: Program shall process user registration within 3 seconds
         NFR3: Program shall process user reservation within 10 seconds
         NFR4: Program shall update parking availability within 10 seconds after receiving registration/occupancy data
@@ -121,79 +122,135 @@ Software Requirements Specification (SRS):
             Precondition: User has access to program and is looking for a parking spot given destination/search location
             Steps:
                 1. User enters information on destination (zip code, address, etc.)
-                2. Program searches available
+                2. Program searches available parking garages/spaces
+                3. Program shows nearby parking options
             Postcondition: Program shows available parking spaces that match the user's search
         USC-4:
             Title: Looking for Real-time availabilty for parking
             Actor: User/Driver
             Precondition: Parking spaces are in the program and occupancy information is available
             Steps:
+                1. User selects parking garage/spot
+                2. Program checks occupancy information regarding spot
+                3. Program shows available and occupied spaces
+                4. Program shows last availability update
             Postcondition: User is shown available and occupied spaces on an interactive map live
         USC-5:
             Title: Viewing interactive map 
             Actor: User/Driver
             Precondition: User has access to program and live locations are available in the program
             Steps:
+                1. User opens parking map
+                2. Program shows parking garages/spaces
+                3. User selects desired space
+                4. Program shows parking information
             Postcondition: User is shown parking spaces/garages on an interactive map
         USC-6:
             Title: View Parking details/data
             Actor: User/Driver
             Precondition: Parking space exists and user selects it
             Steps:
+                1. User inputs details on desired parking space
+                2. User selects desired parking space
+                3. Program shows details on parking space to the user
             Postcondition: Information related to selected parking space is displayed
         USC-7:
             Title: Reserving Parking Space
             Actor: User/Driver
             Precondition: User is logged into program, parking space is available, Parking period is available
             Steps:
+                1. User selects parking space
+                2. Program shows available times/spaces
+                3. User selects reservation period
+                4. Program verifies space
+                5. Program calculates cost for reservation
+                6. User confirms reservation
+                7. Program creates reservation
+                8. Program sends confirmation to Parking Admin
             Postcondition: Parking space is reserved and created during user's selected period
         USC-8:
             Title: User makes digital payment
             Actor: User/Driver
             Precondition: User has a valid and available payment method, User has made a valid reservation
             Steps:
-            Postcondition: Payment is processed and confirms reservation, transaction is successful
+                1. User makes reservation
+                2. Program shows payment amount
+                3. User procvides payment information
+                4. Program sends transaction to payment service
+                5. Payment Service processes transaction
+                6. Program receives confirmation
+                7. Program confirms paid reservation
+                8. Program generates a receipt
+            Postcondition: Payment is processed and confirms reservation, transaction is successful, prints receipt
         USC-9:
             Title: Viewing Reservation History
             Actor: User/Driver
             Precondition: User has at least one reservation confirmed/processed
             Steps:
+                1. User selects reservation history
+                2. Program retrieves the user's reservations
+                3. Program shows reservation information
             Postcondition: User's current and previous reservations are shown
         USC-10:
             Title: View Receipt
             Actor: User/Driver
             Precondition: User has a completed reservation with a successful payment
             Steps:
+                1. User selects paid reservation
+                2. Program shows receipt related details
             Postcondition: User is shown receipt information with related payment
         USC-11:
             Title: Receiving notifications and alerts
             Actor: User/Driver/Parking Admin
             Precondition: User is logged into their respective accounts and notifcations are enabled, a related event occurs
             Steps:
+                1. parking event occurs
+                2. Program generates notification or alert based on event
+                3. Program sends alert/notification to user
+                4. User receives alert
             Postcondition: Related/relevant notification is shown/sent to the user 
         USC-12:
             Title: Managing Parking spaces
             Actor: Parking Admin
             Precondition: Admin is authenticated and has admin privileges
             Steps:
+                1.  Admin logs into authorized dashboard
+                2. Admin select parking management
+                3. Program shows existing parking spaces
+                4. Admin adds, removes, or updates space(s)
+                5. Program saves any changes made
             Postcondition: Selected parking spaces can be updated, added, or removed
         USC-13:
             Title: Managing Reservations
             Actor: Parking Admin
             Precondition: Admin is authenticated and has admin privileges, reservations are active
             Steps:
+                1. Admin selects reservation management
+                2. Program shows reservations
+                3. Admin searchers or filters through reservations
+                4. Admin views details realted to reservations
+                5. Admin updates or cancels reservation
             Postcondition: Reservations are updated, denied, or viewed by the Admin
         USC-14:
             Title: Looking at occupancy analytics/reports
             Actor: Parking Admin
             Precondition: Admin is authenticated and has admin privileges, occupancy data is in the program
             Steps:
+                1. Admin selects analytics/reports
+                2. Program retrieves occupancy data
+                3. Program calculates related statistics
+                4. Program shows text and image-related reports/analytics to admin
             Postcondition: Occupancy-related analytics and reports are shown to the admin
         USC-15:
             Title: Navigation directions to selected parking spot
             Actor: User/Driver
             Precondition: User selects parking garage/spot, external mapping service is up
             Steps:
+                1. User selects parking space
+                2. User selects directions
+                3. Program sends navigation route through a mapping service
+                4. Mapping service generates directions
+                5. User uses navigation information
             Postcondition: User receives directions towards their selected parking garage/spot
 
 
