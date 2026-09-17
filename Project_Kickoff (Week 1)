@@ -29,8 +29,8 @@ Vision & Scope:
 
 Software Requirements Specification (SRS):
     Project: Parking$MART
-    Version 1.0
-    Date: 09.09.26
+    Version 2.0
+    Date: 09.17.26
     
     1. Introduction
     1.1 Purpose
@@ -255,8 +255,29 @@ Software Requirements Specification (SRS):
                 5. User uses navigation information
             Postcondition: User receives directions towards their selected parking garage/spot
 
+Work Breakdown Structure:
+    1. Authentication
+        a. Login, Registration, Session Management
+    2. Add User/Operator
+    3. Dashboards:
+        a. add/edit/remove garage
+        b. Find Parking, select and pay
+    4. Reporting
+        a. Graphs for occupancies, Export financial reports
+    5. Payment
+        a. payment method
+        b. receipt
+        c. transaction
+    6. Mapping 
+        a. routing
+        b. interactive map
+        c. parking search
+    7. Booking
+        a. prevent double booking
+        b. only show available parking spots
+        
 
 
 
 --------------------------------------------------------
-Last updated: 09.09.26
+Last updated: 09.17.26
