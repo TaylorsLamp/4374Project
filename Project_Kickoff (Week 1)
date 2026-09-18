@@ -13,7 +13,7 @@ Research:
     To be different, I am including parking predictibility, parking recommendations, violation prevention, and accessibility-based parking that uses an AI to help manage and guide the usersto their desired parking needs.
 
 Vision & Scope:
-    $oftware Corp is a software development studio that works with companies and organizations to aid in needs of everyday struggles. This project was acquired through the demand for a centralized and efficient approach to parking management. The Smart Parking Platform handles the issues that everyday parking has like congestion, frustration, and the lack of productivity in finding spaces. The project will examine exisiting parking solutions and find opportunities to improve user experience and needs with real-time information, improved parking management and payment, and AI aided recommendation.
+    $oftware Corp is a software development studio that works with companies and organizations to aid in needs of everyday struggles. This project was acquired through the demand for a centralized and efficient approach to parking management. The Smart Parking Platform handles the issues that everyday parking has like congestion, frustration, and the lack of productivity in finding spaces. The project will examine exisiting parking solutions and find opportunities to improve user experience and needs with real-time information, improved parking management and payment.
     The software will provide:
         User registration and authentication
         Real-time parking space availability
@@ -257,25 +257,84 @@ Software Requirements Specification (SRS):
 
 Work Breakdown Structure:
     1. Authentication
-        a. Login, Registration, Session Management
-    2. Add User/Operator
-    3. Dashboards:
+        a. Registration
+        b. Login
+        c. Session Management
+        d. add user/admin
+        e. Role-based Access Control
+    3. User Dashboard
+        a. Find parking
+        b. reservation history
+        c. receipts
+    4. Admin Dashboard
         a. add/edit/remove garage
-        b. Find Parking, select and pay
-    4. Reporting
-        a. Graphs for occupancies, Export financial reports
-    5. Payment
-        a. payment method
-        b. receipt
-        c. transaction
-    6. Mapping 
-        a. routing
-        b. interactive map
-        c. parking search
-    7. Booking
-        a. prevent double booking
-        b. only show available parking spots
+        b. Manage Reservations
+        c. Manage parking space
+    5. Mapping & Navigation
+        a. interactive map
+        b. parking search
+        c. routing
+    6. Booking
+        a. reserve parking space
+        b. prevent double booking
+        c. prevent simultaneous reservations
+    7. Payment System
+        a. Payment method
+        b. Transactions
+        c. Receipts
+    8. Notifications & Alerts
+        a. Reservation Alerts
+        b. Payment Notifications
+        c. Parking Updates
+    9. Reporting & Analytics
+        a. Occupancy Graphs
+        b. Financial Reports
+    10. Testing & Quality Assurance
+    11. Deployment & Documentation
         
+Task / Week                  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+-------------------------------------------------------------------------------
+Project Planning & Analysis  ████
+
+Requirements Finalization       ██
+
+System Design                      ████
+
+Authentication Module                 ███████
+(User Registration, Login,
+Session Management)
+
+Role-Based Access Control                   ███     
+
+Database Design & Setup                       █████
+
+Dashboard Development                             ███
+(User/Admin)        
+
+Mapping Integration                                 ███████
+(Interactive Map,
+Parking Search, Navigation)
+
+Parking Availability System                            █████
+(Real-Time Occupancy)
+
+Reservation Module                                         ████
+(Booking, Double Booking Prevention)
+
+Payment Integration                                        ██
+(Payment Methods, Transactions)
+
+Receipt & Reservation History                               ██
+
+Notifications & Alerts                                         ████       
+
+Reporting & Analytics                                             ████       
+(Occupancy Graphs, Financial Reports)                   
+
+Testing/Training                                                    ██████
+(User/Bug/Fail)
+
+Deployment & Documentation                                                 █████
 
 
 

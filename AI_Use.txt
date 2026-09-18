@@ -1,2 +1,3 @@
 Is my formatting fine? it changed some of lines of the project to be less contradictory like hardware
 For my Research I asked: "What are some of the common things that parking apps have in common?" I used what was given and tried to figure out how I can differ
+Can you format me an empty gantt chart that I can fill out myself? I did not know how to input or format a gantt chart into a .txt file so i asked if it was possible to do it this way to save me time
